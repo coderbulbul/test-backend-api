@@ -5,10 +5,10 @@ const app = express();
 
 // Routing
 app.get("/", (req, res) => {
-  res.send("Get request to homepag");
+  res.json({ message: "Hello World" });
 });
 
-app.listen(8000, () => {
+app.listen(process.env.PORT, () => {
   console.log("App is running on port 8000");
 });
 
